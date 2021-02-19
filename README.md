@@ -2,7 +2,7 @@
 
 Represents the cluster state for non-production clusters
 
-## Usage
+## Steps
 
 Install Flux2
 
@@ -36,6 +36,21 @@ flux bootstrap github \
     --personal \
     --path=clusters/dev
 ```
+
+Then setup the cluster for staging using CAPI or kind:
+
+```bash
+kind create cluster --name=kubecoins-staging
+
+flux bootstrap github \
+    --context=kind-kubecoins-staging \
+    --owner=${GITHUB_USER} \
+    --repository=flux-nonprod-clusters \
+    --branch=main \
+    --personal \
+    --path=clusters/staging
+```
+
 
 ## Acknowledgments
 This is based on this [Flux2 sample](https://github.com/fluxcd/flux2-kustomize-helm-example) and the **GitOps at Scale** work from Weaveworks.
