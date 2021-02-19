@@ -9,9 +9,5 @@ spec:
       version: ">=1.0.0-alpha"
   test:
     enable: true
-  # values:
-  #   ingress:
-  #     hosts:
-  #       - podinfo.dev
-  #   faults:
-  #     testFail: true
+    faults:
+      testFail: true
