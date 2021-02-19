@@ -11,4 +11,4 @@ spec:
     enable: true
   values:
     faults:
-      testFail: true
+      testFail: false
