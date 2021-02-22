@@ -8,7 +8,7 @@ spec:
     spec:
       version: ">=1.0.0-alpha"
   test:
-    enable: true
-  values:
-    faults:
-      testFail: true
+    enable: false
+  # values:
+  #   faults:
+  #     testFail: true
